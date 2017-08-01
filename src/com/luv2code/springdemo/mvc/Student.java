@@ -1,11 +1,21 @@
 package com.luv2code.springdemo.mvc;
 
+import java.util.LinkedHashMap;
+
 //Just a POJO for example
 public class Student {
 
 	private String firstName, lastName, country;
 	
+	private LinkedHashMap<String, String> countryOptions;
+	
 	public Student() {
+		countryOptions = new LinkedHashMap<>();
+		countryOptions.put("BR", "Brazil");
+		countryOptions.put("DE", "Germany");
+		countryOptions.put("FR", "France");
+		countryOptions.put("IN", "India");
+		countryOptions.put("US", "United States of America");
 	}
 
 	public String getFirstName() {
@@ -30,5 +40,9 @@ public class Student {
 
 	public void setCountry(String country) {
 		this.country = country;
+	}
+	
+	public LinkedHashMap<String, String> getCountryOptions() {
+		return countryOptions;
 	}
 }
