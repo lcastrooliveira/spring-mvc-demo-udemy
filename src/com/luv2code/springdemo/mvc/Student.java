@@ -3,7 +3,7 @@ package com.luv2code.springdemo.mvc;
 //Just a POJO for example
 public class Student {
 
-	private String firstName, lastName, country;
+	private String firstName, lastName, country, favoriteLanguage;
 	
 	public Student() {}
 
@@ -29,5 +29,13 @@ public class Student {
 
 	public void setCountry(String country) {
 		this.country = country;
+	}
+
+	public String getFavoriteLanguage() {
+		return favoriteLanguage;
+	}
+
+	public void setFavoriteLanguage(String favoriteLanguage) {
+		this.favoriteLanguage = favoriteLanguage;
 	}
 }
